@@ -38,12 +38,15 @@ var timeEl = $('.time-block');
       }
       else if(idnum<now){
         $(wrapperEl).children().children().children().eq(i).addClass('past');
-    }
-    else if (idnum>now){
+      }
+      else if (idnum>now){
         $(wrapperEl).children().children().children().eq(i).addClass('future');
-    }
+      }
     });
-    
+    $('button').each(function(i){
+      $(this).attr('id', 'bttn' + (i + 6));
+    });
+
 
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id

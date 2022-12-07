@@ -85,13 +85,10 @@ This Challenge is graded based on the following criteria:
 
 * Repository contains quality README file with description, screenshot, and link to deployed application
 
-## Review
+# Resources
 
-You are required to submit the following for review:
+[Jquery](https://jquery.com/)
 
-* The URL of the deployed application
+[Jquery](https://learningjquery.com/)
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+[Dayjs](https://day.js.org/en/)
