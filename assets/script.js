@@ -2,6 +2,7 @@
 $(".all").wrapAll("<div class='wrapper' />")
 var wrapperEl = $('.wrapper');
 var timeEl = $('.time-block');
+var textEl = $('.description');
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
@@ -31,8 +32,6 @@ var timeEl = $('.time-block');
     $(wrapperEl).children().children().children().each(function(i){
       var id = $(wrapperEl).children().children().children().eq(i).attr('id')
       var idnum = parseInt(id);
-      console.log(idnum);
-      console.log(nownum);
       if(idnum==nownum){
         $(wrapperEl).children().children().children().eq(i).addClass('present');
       }
@@ -46,12 +45,19 @@ var timeEl = $('.time-block');
     $('button').each(function(i){
       $(this).attr('id', 'bttn' + (i + 6));
     });
-
-
+    
+    
+    
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
     //
+    $('button').click(function(i){
+      var bid = $(this).attr('id')
+      console.log(bid);
+      var text = $(textEl).val();
+     localStorage.setItem('text'+ bid, text);
+    });
 
 
     // TODO: Add code to display the current date in the header of the page.
