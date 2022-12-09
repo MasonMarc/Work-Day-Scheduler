@@ -1,12 +1,8 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 $(".all").wrapAll("<div class='wrapper' />")
 var wrapperEl = $('.wrapper');
 var timeEl = $('.time-block');
 var textEl = $('.description');
-
-
 var now = dayjs().format('H');
-
 var nownum = parseInt(now);
 
 $(wrapperEl).children().children().children().each(function (i) {
@@ -30,10 +26,7 @@ $('textarea').each(function (i) {
   $(this).attr('id', 'bttn' + (i + 8));
 });
 
-
-
 // On click, save to local storage
-
 $('button').click(function () {
   for(var i =0;i<textEl.length;i++){
     var text = $('.description').eq(i).val();
